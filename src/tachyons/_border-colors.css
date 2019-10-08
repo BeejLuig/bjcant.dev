@@ -1,0 +1,86 @@
+/*
+
+   BORDER COLORS
+   Docs: http://tachyons.io/docs/themes/borders/
+
+   Border colors can be used to extend the base
+   border classes border, border-top, border-bottom, border-right,
+   border-left found in the _borders.css file.
+
+   The base border class by default will set the color of the border
+   to that of the current text color. These classes are for the cases
+   where you desire for the text and border colors to be different.
+
+*/
+
+.bordercolor-black {        border-color: var(--black); }
+.bordercolor-nearblack {   border-color: var(--near-black); }
+.bordercolor-darkgray,
+.bordercolor-darkgrey {    border-color: var(--dark-gray); }
+.bordercolor-midgray,
+.bordercolor-midgrey {     border-color: var(--mid-gray); }
+.bordercolor-gray,
+.bordercolor-grey {         border-color: var(--gray); }
+.bordercolor-silver {       border-color: var(--silver); }
+.bordercolor-moongray,
+.bordercolor-moongrey {       border-color: var(--moon-gray); }
+.bordercolor-lightsilver { border-color: var(--light-silver); }
+.bordercolor-lightgray,
+.bordercolor-lightgrey {   border-color: var(--light-gray); }
+.bordercolor-nearwhite {   border-color: var(--near-white); }
+.bordercolor-white {        border-color: var(--white); }
+
+.bordercolor-white90 {   border-color: var(--white-90); }
+.bordercolor-white80 {   border-color: var(--white-80); }
+.bordercolor-white70 {   border-color: var(--white-70); }
+.bordercolor-white60 {   border-color: var(--white-60); }
+.bordercolor-white50 {   border-color: var(--white-50); }
+.bordercolor-white40 {   border-color: var(--white-40); }
+.bordercolor-white30 {   border-color: var(--white-30); }
+.bordercolor-white20 {   border-color: var(--white-20); }
+.bordercolor-white10 {   border-color: var(--white-10); }
+.bordercolor-white05 {   border-color: var(--white-05); }
+.bordercolor-white025 {   border-color: var(--white-025); }
+.bordercolor-white0125 {   border-color: var(--white-0125); }
+
+.bordercolor-black90 {   border-color: var(--black-90); }
+.bordercolor-black80 {   border-color: var(--black-80); }
+.bordercolor-black70 {   border-color: var(--black-70); }
+.bordercolor-black60 {   border-color: var(--black-60); }
+.bordercolor-black50 {   border-color: var(--black-50); }
+.bordercolor-black40 {   border-color: var(--black-40); }
+.bordercolor-black30 {   border-color: var(--black-30); }
+.bordercolor-black20 {   border-color: var(--black-20); }
+.bordercolor-black10 {   border-color: var(--black-10); }
+.bordercolor-black05 {   border-color: var(--black-05); }
+.bordercolor-black025 {   border-color: var(--black-025); }
+.bordercolor-black0125 {   border-color: var(--black-0125); }
+
+.bordercolor-darkred { border-color: var(--dark-red); }
+.bordercolor-red { border-color: var(--red); }
+.bordercolor-lightred { border-color: var(--light-red); }
+.bordercolor-orange { border-color: var(--orange); }
+.bordercolor-gold { border-color:  var(--gold); }
+.bordercolor-yellow { border-color:  var(--yellow); }
+.bordercolor-lightyellow { border-color: var(--light-yellow); }
+.bordercolor-purple { border-color:  var(--purple); }
+.bordercolor-lightpurple { border-color:  var(--light-purple); }
+.bordercolor-darkpink { border-color:  var(--dark-pink); }
+.bordercolor-hotpink { border-color:  var(--hot-pink); }
+.bordercolor-pink { border-color:  var(--pink); }
+.bordercolor-lightpink { border-color:  var(--light-pink); }
+.bordercolor-darkgreen { border-color:  var(--dark-green); }
+.bordercolor-green { border-color:  var(--green); }
+.bordercolor-lightgreen { border-color: var(--light-green); }
+.bordercolor-navy { border-color:  var(--navy); }
+.bordercolor-darkblue { border-color:  var(--dark-blue); }
+.bordercolor-blue { border-color:  var(--blue); }
+.bordercolor-lightblue { border-color:  var(--light-blue); }
+.bordercolor-lightestblue { border-color:  var(--lightest-blue); }
+.bordercolor-washedblue { border-color:  var(--washed-blue); }
+.bordercolor-washedgreen { border-color:  var(--washed-green); }
+.bordercolor-washedyellow { border-color:  var(--washed-yellow); }
+.bordercolor-washedred { border-color: var(--washed-red); }
+
+.bordercolor-transparent { border-color: var(--transparent); }
+.bordercolor-inherit { border-color: inherit; }
