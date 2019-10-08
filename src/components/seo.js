@@ -34,7 +34,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={window.location.pathname === rootPath
+      titleTemplate={typeof window !== 'undefined' && location.pathname === rootPath
         ? site.siteMetadata.title
         : `%s | ${site.siteMetadata.title}`
       }

@@ -48,7 +48,7 @@ const Bio = () => {
   const [color, setColor] = useState('');
   let index = 0;
   useEffect(() => {
-    if (window.location.pathname === rootPath) {
+    if (typeof window !== 'undefined' && window.location.pathname === rootPath) {
       let interval
       let timeout = setTimeout(() => {
         interval = setInterval(() => {
