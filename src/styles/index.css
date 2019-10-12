@@ -1,8 +1,4 @@
 /**
-* https://github.com/tachyons-css/tachyons/
-*/
-@import "./tachyons.css";
-/**
 * Fira Sans
 * by Carrois Apostrophe
 * https://carrois.com/
@@ -12,6 +8,11 @@
 * https://github.com/tonsky/FiraCode 
 */
 @import url('https://fonts.googleapis.com/css?family=Fira+Code|Fira+Sans:300,500&display=swap');
+
+/**
+* https://github.com/tachyons-css/tachyons/
+*/
+@import "./tachyons.css";
 
 :root {
   --color-link: var(--light-blue);
