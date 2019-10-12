@@ -48,6 +48,7 @@ class Layout extends React.Component {
         <footer className="nearwhite clearfix paddingtop-xlarge">
           <ul className="list margin-none padding-none float-left">
           {
+            social &&
             Object.keys(social)
               .sort()
               .map((key, idx, arr) => (
