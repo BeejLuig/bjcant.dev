@@ -4,15 +4,16 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "../styles/index.css";
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const { title: siteTitle, social } = this.props.data.site.siteMetadata
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle} social={social}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -80,6 +81,11 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        social {
+          linkedin
+          twitter
+          github
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
