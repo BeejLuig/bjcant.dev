@@ -45,20 +45,22 @@ class Layout extends React.Component {
       >
         <header className="marginvertical-medium">{header}</header>
         <main>{children}</main>
-        <footer className="nearwhite">
-          <ul className="list marginleft-none paddingleft-none">
+        <footer className="nearwhite clearfix paddingtop-xlarge">
+          <ul className="list margin-none padding-none float-left">
           {
-            Object.entries(social)
-              .map(([key, value]) => (
-                <li key={key}>
-                  <a className="link lightblue hover-dim" href={value} rel="nofollow noopener">{key}</a>
+            Object.keys(social)
+              .sort()
+              .map((key, idx, arr) => (
+                <li className="paddingright-xsmall display-inlineblock" key={key}>
+                  { idx > 0 && idx < arr.length && '/  '}
+                  <a className="link lightblue hover-dim" href={social[key]} rel="nofollow noopener">{key}</a>
                 </li>
               ))
           }
           </ul>
-          <span className="green">© {new Date().getFullYear()}</span> Built with
-          {` `}
-          <a className="link lightblue hover-dim" rel="nofollow noopener" href="https://www.gatsbyjs.org">Gatsby</a>
+          <div className="float-right">
+            <span className="green">© {new Date().getFullYear()}</span> Built with 💙
+          </div>
         </footer>
       </div>
     )
