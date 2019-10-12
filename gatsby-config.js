@@ -5,9 +5,9 @@ module.exports = {
     description: `Web development blog of BJ Cantlupe`,
     siteUrl: `https://bjcantlupe.com`,
     social: {
-      twitter: `beejluig`,
-      github: `beejluig`,
-      linkedin: `bj-cantlupe`
+      twitter: `https://twitter.com/BeejLuig`,
+      github: `https://github.com/BeejLuig`,
+      linkedin: `https://www.linkedin.com/in/bj-cantlupe/`
     },
   },
   plugins: [
@@ -53,7 +53,7 @@ module.exports = {
             options: {
               blockquote: ['white60 marginhorizontal-none margintop-none paddingleft-medium border-left borderwidth-2 bordercolor-blue'],
               break: ['break'],
-              inlineCode: ['backgroundcolor-white10 borderradius-2 paddinghorizontal-xsmall'],
+              inlineCode: ['backgroundcolor-white10 borderradius-2 paddinghorizontal-xsmall wordbreak-break-word f5 f4-l'],
               image: ['center'],
               a: ['link', 'hover-dim', 'textdecoration-underline'],
               h1: ['f1'],
@@ -107,6 +107,13 @@ module.exports = {
       options: {
         target: '_blank',
       },
+    },
+    {
+      resolve: `gatsby-plugin-draft`,
+      options: {
+        timezone: 'America/New_York',
+        publishDraft: process.env.NODE_ENV !== 'production'
+      }
     }
   ]
 }

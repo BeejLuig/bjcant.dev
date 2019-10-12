@@ -9,6 +9,22 @@ import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
+let index = 0;
+const colors = [
+  'lightblue',
+  'lightpurple',
+  'red',
+  'lightred',
+  'lightpink',
+  'hotpink',
+  'pink',
+  'lightgreen',
+  'green',
+  'gold',
+  'yellow',
+  'lightyellow',
+]
+const rootPath = `${__PATH_PREFIX__}/`
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -29,24 +45,8 @@ const Bio = () => {
       }
     }
   `)
-  
-  const colors = [
-    'lightblue',
-    'lightpurple',
-    'red',
-    'lightred',
-    'lightpink',
-    'hotpink',
-    'pink',
-    'lightgreen',
-    'green',
-    'gold',
-    'yellow',
-    'lightyellow',
-  ]
-  const rootPath = `${__PATH_PREFIX__}/`
   const [color, setColor] = useState('');
-  let index = 0;
+
   useEffect(() => {
     if (typeof window !== 'undefined' && window.location.pathname === rootPath) {
       let interval

@@ -27,14 +27,14 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const rootPath = `${__PATH_PREFIX__}/`
-  console.log(rootPath)
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      titleTemplate={typeof window !== 'undefined' && location.pathname === rootPath
+      titleTemplate={typeof window !== 'undefined' && window.location.pathname === rootPath
         ? site.siteMetadata.title
         : `%s | ${site.siteMetadata.title}`
       }

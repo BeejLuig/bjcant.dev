@@ -11,7 +11,7 @@
 * by Multiple Designers
 * https://github.com/tonsky/FiraCode 
 */
-@import url('https://fonts.googleapis.com/css?family=Fira+Code|Fira+Sans:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Code|Fira+Sans:300,500&display=swap');
 
 :root {
   --color-link: var(--light-blue);
@@ -248,4 +248,9 @@ pre > code.highlight {
 /* transitions */
 .color-cycle {
   transition: .5s ease-in color;
+}
+
+/* TODO: move into tachyons */
+.wordbreak-break-word {
+  word-wrap: break-word;
 }

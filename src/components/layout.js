@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, social, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
@@ -45,10 +45,20 @@ class Layout extends React.Component {
       >
         <header className="marginvertical-medium">{header}</header>
         <main>{children}</main>
-        <footer className="textalign-right nearwhite">
+        <footer className="nearwhite">
+          <ul className="list marginleft-none paddingleft-none">
+          {
+            Object.entries(social)
+              .map(([key, value]) => (
+                <li key={key}>
+                  <a className="link lightblue hover-dim" href={value} rel="nofollow noopener">{key}</a>
+                </li>
+              ))
+          }
+          </ul>
           <span className="green">© {new Date().getFullYear()}</span> Built with
           {` `}
-          <a className="link lightblue hover-dim" href="https://www.gatsbyjs.org">Gatsby</a>
+          <a className="link lightblue hover-dim" rel="nofollow noopener" href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
     )

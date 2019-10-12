@@ -39,6 +39,7 @@
     "typography-theme-us-web-design-standards": "^0.16.19"
   },
   "devDependencies": {
+    "gatsby-plugin-draft": "0.0.5",
     "prettier": "^1.18.2",
     "tachyons-cli": "^1.3.2",
     "tachyons-verbose": "^4.9.1"

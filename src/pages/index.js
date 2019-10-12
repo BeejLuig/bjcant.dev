@@ -9,11 +9,11 @@ import "../styles/index.css";
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
+    const { social, title: siteTitle } = data.site.siteMetadata
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle} social={social}>
         <SEO title="All posts" />
         <Bio />
         {posts.map(({ node }) => {
@@ -50,6 +50,11 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        social {
+          linkedin
+          twitter
+          github
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
