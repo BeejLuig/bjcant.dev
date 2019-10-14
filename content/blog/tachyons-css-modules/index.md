@@ -6,7 +6,7 @@ date: 2019-10-15
 
 For a while now, I have used [CSS modules](https://github.com/css-modules/css-modules) to style applications at work. If you have never used CSS modules before, it can be a great solution for scoped, composable styles. Building a shared component library? CSS Modules will be your friend! 
 
-My team started working on a project that couples CSS modules with [Tachyons](http://tachyons.io/), a small open-source CSS library of utility classes. If you are familiar with [tailwindcss](https://tailwindcss.com/), Tachyons is comparable but much more simple. Contrary to most style patterns, utility-based CSS libraries like Tachyons discourage the use of the cascade, preferring instead to use class names that describe the style property and value. 
+My team started working on a project that couples CSS modules with [Tachyons](http://tachyons.io/), a small open-source CSS library of utility classes. If you are familiar with [TailwindCSS](https://tailwindcss.com/), Tachyons is comparable but much more simple. Contrary to most style patterns, utility-based CSS libraries like Tachyons discourage the use of the cascade, preferring instead to use class names that describe the style property and value. 
 
 Using [an example of a heading](http://tachyons.io/components/text/title-subtitle-centered/index.html):
 
@@ -27,6 +27,8 @@ Combine Tachyons with CSS Modules and you have a solution to both of these probl
 ## Setup the project
 
 We're going to build a simple profile-card component from the [Tachyons component library](http://tachyons.io/components/cards/profile-card-title-subtitle/index.html). Let's get started by creating a new project with subfolders.
+
+> If you want to skip the file creation and go straight to code, you can clone the [starter repo](https://github.com/BeejLuig/css-modules-tachyons-demo/tree/start).
 
 ```sh
 mkdir -p css-modules-tachyons-demo/{src,dist,vendors}
@@ -475,6 +477,8 @@ html {
 All of the available colors are in `vendors/tachyons/_variables.css`. Play around and see what you come up with! Once you get used to the class name patterns, changing styles is effortless
 
 ## Conclusion
+
+Thanks for reading! To see the finished product, clone the [starter repo](https://github.com/BeejLuig/css-modules-tachyons-demo/tree/complete) and checkout the `complete` branch.
 
 Things we learned:
 
