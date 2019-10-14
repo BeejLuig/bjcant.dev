@@ -29,7 +29,7 @@ class BlogPostTemplate extends React.Component {
           </header>
           <section 
             className="white80 marginbottom-large nested-copy-line-height 
-            nested-copy-headline-line-height nested-list-reset nested-copy-indent 
+            nested-copy-headline-line-height nested-copy-indent 
             nested-copy-separator nested-img nested-links nested-list nested-table nested-hr nested-video"
             dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
