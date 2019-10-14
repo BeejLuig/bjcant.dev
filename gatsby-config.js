@@ -3,7 +3,7 @@ module.exports = {
     title: `bjcant.dev`,
     author: `BJ Cantlupe`,
     description: `Web development blog of BJ Cantlupe`,
-    siteUrl: `https://bjcantlupe.com`,
+    siteUrl: `https://bjcant.dev`,
     social: {
       twitter: `https://twitter.com/BeejLuig`,
       github: `https://github.com/BeejLuig`,
