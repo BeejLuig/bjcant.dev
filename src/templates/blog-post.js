@@ -19,6 +19,11 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article>
+          { post.frontmatter.draft && (
+            <div className="border bordercolor-washedred borderradius-2 paddingleft-medium backgroundcolor-orange">
+              <h2 className="black">This is a draft. Don't forget.</h2>
+            </div>
+          )}
           <header>
             <h1 className="f1 washedblue marginbottom-xsmall">
               {post.frontmatter.title}
@@ -29,7 +34,7 @@ class BlogPostTemplate extends React.Component {
           </header>
           <section 
             className="white80 marginbottom-large nested-copy-line-height 
-            nested-copy-headline-line-height nested-list-reset nested-copy-indent 
+            nested-copy-headline-line-height nested-copy-indent 
             nested-copy-separator nested-img nested-links nested-list nested-table nested-hr nested-video"
             dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
@@ -93,6 +98,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       frontmatter {
+        draft
         title
         date(formatString: "MMMM DD, YYYY")
         description
