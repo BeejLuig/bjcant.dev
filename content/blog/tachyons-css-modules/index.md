@@ -4,7 +4,7 @@ description: Harnessing the power of utility-first CSS.
 date: 2019-10-15
 ---
 
-For a while now, I have used [CSS modules](https://github.com/css-modules/css-modules) to style applications at work. If you have never used CSS modules before, it can be a great solution for scoped, composable styles. Building a shared component library? CSS Modules will be your friend! 
+For a while now, I have used [CSS modules](https://github.com/css-modules/css-modules) to style applications at work. If you have never used CSS modules before, it can be a great solution for scoped, composable styles. Building a shared component library? CSS Modules will be your friend!
 
 My team started working on a project that couples CSS modules with [Tachyons](http://tachyons.io/), a small open-source CSS library of utility classes. If you are familiar with [TailwindCSS](https://tailwindcss.com/), Tachyons is comparable but much more simple. Contrary to most style patterns, utility-based CSS libraries like Tachyons discourage the use of the cascade, preferring instead to use class names that describe the style property and value. 
 
@@ -23,6 +23,14 @@ You may be able to see some drawbacks of this already. For me, there are two big
 1. **It's verbose**: If one tag requires some complex styling, you will be looking at a _long line of class names_. This is particularly apparent with media queries, as with the font-size above (i.e. `f3 f2-m f1-l`). 
 
 Combine Tachyons with CSS Modules and you have a solution to both of these problems: **class name composition**! I want to take you through my approach to this pattern using Webpack.
+
+Things we will learn:
+
+- How to setup a webpack config for CSS Modules
+- How to integrate the Tachyons library into your project
+- How to compose styles
+- How to use PostCSS to avoid `@import` pitfalls
+- How to alias filepaths in `composes` rules
 
 ## Setup the project
 
@@ -260,7 +268,7 @@ If you run the app and inspect the page, we should see that the app isn't styled
 Inspect the app now, and you should see the styles applied, along with a new class name.
 
 ```html
-<article class="style_profileCard">...</article>
+<article class="styles_profileCard">...</article>
 ```
 
 ## Composition
@@ -479,13 +487,5 @@ All of the available colors are in `vendors/tachyons/_variables.css`. Play aroun
 ## Conclusion
 
 Thanks for reading! To see the finished product, clone the [starter repo](https://github.com/BeejLuig/css-modules-tachyons-demo/tree/complete) and checkout the `complete` branch.
-
-Things we learned:
-
-- How to setup a webpack config for CSS Modules
-- How to integrate the Tachyons library into your project
-- How to compose styles
-- How to use PostCSS to avoid `@import` pitfalls
-- How to alias filepaths in `composes` rules
 
 I hope this post has convinced you to try combining CSS Modules and Tachyons (or any utility-based CSS library, really) for your next project! If you have any questions/comments, drop me a line!
