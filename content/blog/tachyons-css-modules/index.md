@@ -1,7 +1,7 @@
 ---
 title: Composing Styles with Tachyons and CSS Modules
 description: Harnessing the power of utility-first CSS.
-date: 2019-10-15
+date: 2019-10-16
 ---
 
 For a while now, I have used [CSS modules](https://github.com/css-modules/css-modules) to style applications at work. If you have never used CSS modules before, it can be a great solution for scoped, composable styles. Building a shared component library? CSS Modules will be your friend!
