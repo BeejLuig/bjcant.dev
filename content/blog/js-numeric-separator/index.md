@@ -1,8 +1,7 @@
 ---
 title: JS Numeric Separator
 description: A new ECMAScript feature you can try out right now!
-date: 2019-10-18
-draft: true
+date: 2019-10-19
 ---
 
 Here's a new ECMAScript feature that I am excited about: numeric separators. Currently in [proposal stage 3](https://github.com/tc39/proposal-numeric-separator), this readability feature will make it much easier for our eyes to parse numbers. If you have Chrome version 75 or above -- find your version by typing `chrome://version/` in your URL input -- you can test out this feature in Chrome dev tools right now!
