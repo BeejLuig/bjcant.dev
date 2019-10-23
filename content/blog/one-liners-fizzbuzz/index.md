@@ -1,8 +1,7 @@
 ---
 title: One Liners - FizzBuzz
 description: 
-date: 2019-10-23
-draft: true
+date: 2019-10-24
 ---
 
 FizzBuzz is possibly the most well-known coding challenge out there. There are many flavors of this problem, but the version that most candidates see in coding interviews looks something like the description on [Leet Code](https://leetcode.com/problems/fizz-buzz/):
