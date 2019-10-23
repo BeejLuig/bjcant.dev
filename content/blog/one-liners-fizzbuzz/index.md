@@ -49,7 +49,7 @@ The nice thing about this solution is that it essentially steps through the prob
 - Default to adding the stringified number to the array of the above conditions aren't met
 - Return the result
 
-This is clean an simple, and there's not much to optimize. Maybe a switch statement would be better than multiple else-ifs, and maybe we could find a way to combine 'Fizz' and 'Buzz' instead of handling numbers divisible by 15 separately. The time complexity of this problem should be O(n), since the algorithm loops once for every number in the given range.
+This is clean an simple, and there's not much to optimize. Maybe a switch statement would be better than multiple else-ifs, and maybe we could find a way to combine 'Fizz' and 'Buzz' instead of handling numbers divisible by 15 separately.
 
 ## The One Liner
 
@@ -216,8 +216,12 @@ const fizzBuzz = max => Array(max).fill().map(
 )
 ```
 
+And that's it!
+
 ## Conclusion
 
 Understanding method chaining and basic functional programming techniques can really help up your game as a JavaScript developer, and finding ways to write complex logic in one line can be a fun way to practice. It's just as important to understand when to use _and avoid_ these techniques. Maybe you can impress your friends with a one-liner FizzBuzz, but in a production or interview environment, _nobody_ is going to to be happy about parsing all of those parentheses. Chaining methods can be very fast, but they can also be much slower than more "traditional" approaches (i.e. loops) if you aren't careful about your choices. 
+
+If you're interested to know the execution performance of this one-liner versus the original, you can check out the [JSPerf test here](https://jsperf.com/fizzbuzz-one-liner-against-loop/). Spoiler alert: my test run showed the one-liner execute at 109 operations per second, with the original only hit 74.92 ops/sec.
 
 I'm hoping to turn one-liners into a series, but I just need good challenges to use. If you'd like to see a one-liner deep dive on a different coding challenge, please let me know!
