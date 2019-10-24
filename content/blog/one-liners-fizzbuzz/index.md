@@ -1,6 +1,6 @@
 ---
 title: One Liners - FizzBuzz
-description: 
+description: A snarky solution to a common challenge.
 date: 2019-10-24
 ---
 
@@ -72,7 +72,7 @@ const fizzBuzz = max => Array(max).fill().map(
 
 What's going on here? How does one arrive at a similar solution? For me, it starts with understanding the expected inputs and outputs. There is only one expected input this problem, a positive integer -- that's easy enough. If we break down the expected output to the simplest parts, we have this:
 
-- An array where each element is one of three:
+- An array where each element is one of:
   - 'Fizz'
   - 'Buzz'
   - 'FizzBuzz'
@@ -86,7 +86,7 @@ We know that the conditions for 'Fizz' and 'Buzz' are combined for 'FizzBuzz', s
 condition ? exprIfTrue : exprIfFalse
 ```
 
-Let's look back at the if/else logic for FizzBuzz, this time in the context of a function that returns the string result for a single number
+Let's look back at the if/else logic for FizzBuzz, this time in the context of a function.
 
 ```js
 function fizzBuzzify(n) {
@@ -102,7 +102,7 @@ function fizzBuzzify(n) {
 }
 ```
 
-What would this logic look like -- as is -- with ternaries?
+What would this logic look like with ternaries?
 
 ```js
 function fizzBuzzify(n) {
@@ -115,7 +115,7 @@ function fizzBuzzify(n) {
 }
 ```
 
-Nested ternaries work, but they aren't very easy to read or comprehend what's going on. We can consolidate this logic further by separating the pieces. If we want to combine 'Fizz' and 'Buzz', we can do that pretty easily with string concatenation.
+Nested ternaries work, but they aren't very easy to read or reason about. We can consolidate this logic further by separating the pieces. If we want to combine 'Fizz' and 'Buzz', we can do that pretty easily with string concatenation.
 
 ```js
 (n % 3 === 0 ? 'Fizz' : '') + (n % 5 === 0 ? 'Buzz' : '')
@@ -130,7 +130,7 @@ With this logic, we've got a few possible combinations
 4. 'Fizz' + 'Buzz' //=> 'FizzBuzz'
 ```
 
-From here, we can take advantage of JavaScript's **lazy evaluation** feature, meaning that code won't be executed until it is necessary. We can return `n` as a default value by simply adding it after the boolean OR operator (i.e. `||`). If `n` is divisible by neither 3 nor 5, our ternary/concatenation logic will return an empty string, which is indeed falsey and our code will fallback to `n`. As a final optimization, if we are _always_ returning a string data type, we can wrap all of the logic in the `String` method. Our function now looks like this:
+From here, we can take advantage of JavaScript's **lazy evaluation** feature, meaning that code won't be executed until it is necessary. We can return `n` as a default value by simply adding it after the boolean OR operator (i.e. `||`). If `n` is divisible by neither 3 nor 5, our ternary/concatenation logic will return an empty string which is falsey, and our code will fallback to `n`. As a final optimization, if we are _always_ returning a string, we can wrap all of the logic in the `String` method. Our function now looks like this:
 
 ```js
 function fizzBuzzify(n) {
