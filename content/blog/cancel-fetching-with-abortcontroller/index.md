@@ -2,7 +2,6 @@
   title: Cancel Fetching with AbortController
   description: 
   date: 2019-11-25
-  draft: true
 ---
 
 If you are like me, you have wondered if there is a way to cancel a fetch request. Well, there is good news: most modern browsers now support the [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) API, which we can use to do just that! Let's see how it works. 
