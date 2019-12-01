@@ -74,7 +74,7 @@ function App() {
 
 The idea here is to wire up the button to fetch the image, then set it as the background of the `App` container. Let's see that:
 
-```jsx{2-8,13}
+```jsx{2-8,13,16}
 function App() {
   const [url, setUrl] = useState();
   const fetchData = () => {
@@ -99,7 +99,7 @@ function App() {
 
 So now the button is bound to the `fetchData` function, which creates a blob URL for the image and sets it to state, which in turn sets the background. Let's add loading and error states.
 
-```jsx{3,4,8,9,13,14,24,25}
+```jsx{3-4,8-9,13-14,24-25}
 function App() {
   const [url, setUrl] = useState();
   const [loading, setLoading] = useState(false);
@@ -130,9 +130,9 @@ function App() {
 }
 ```
 
-From here, adding the abort functionality is pretty easy. We just need to add an `AbortController`, wire up teh `abort` button and pass the `signal` to `fetch`!
+From here, adding the abort functionality is pretty easy. We just need to add an `AbortController`, wire up the `abort` button and pass the `signal` to `fetch`!
 
-```jsx{1,2,10,14,23,24}
+```jsx{1,2,10,16,23,24}
 let controller = new AbortController();
 const abort = () => controller.abort();
 
@@ -146,8 +146,10 @@ function App() {
     setUrl();
     setError(false);
     setLoading(true);
-    return fetch("./buildings.jpg", { signal: controller.signal })
-      .then(r => r.blob())
+    return fetch(
+      "./buildings.jpg",
+      { signal: controller.signal }
+    ).then(r => r.blob())
       .then(blob => setUrl(URL.createObjectURL(blob)))
       .catch(e => setError(e.message))
       .finally(() => setLoading(false));
