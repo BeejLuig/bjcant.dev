@@ -1,7 +1,7 @@
 ---
-  title: Cancel Fetching with AbortController
+  title: Cancel Fetch with AbortController
   description: 
-  date: 2019-11-25
+  date: 2019-12-01
 ---
 
 If you are like me, you have wondered if there is a way to cancel a fetch request. Well, there is good news: most modern browsers now support the [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) API, which we can use to do just that! Let's see how it works. 
@@ -43,6 +43,10 @@ When we pass a `signal` option to `fetch`, it creates a listener for the `abort`
 
 Now let's see a working example.
 
+We have a button that fetches a large image and sets it as the background. The fetch button becomes an abort button while the request is being made. 
+
+> To see this in action, you may need to double-click pretty quickly, depending on your internet speed. The browser may cache the image after the first time it loads, so you may need to clear application storage if you want to try aborting the fetch multiple times.
+
 <iframe
      src="https://codesandbox.io/embed/gracious-franklin-0u0vz?fontsize=14&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
@@ -51,7 +55,6 @@ Now let's see a working example.
      sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
    ></iframe>
 
-We have a button that fetches a large image and sets it as the background. The fetch button becomes an abort button while the request is being made. To see it in action, you may need to double-click pretty quickly, depending on your internet speed. The browser may cache the image after the first time it loads, so you may need to clear application storage if you want to try aborting the fetch multiple times.
 
 Let's walk through this code. We can start with an initial `App` template:
 
