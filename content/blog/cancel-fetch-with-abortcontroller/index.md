@@ -132,7 +132,7 @@ function App() {
 
 From here, adding the abort functionality is pretty easy. We just need to add an `AbortController`, wire up the `abort` button and pass the `signal` to `fetch`!
 
-```jsx{1,2,10,16,23,24}
+```jsx{1,2,10,16,25-26}
 let controller = new AbortController();
 const abort = () => controller.abort();
 
