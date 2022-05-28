@@ -10,6 +10,9 @@ module.exports = {
       linkedin: `https://www.linkedin.com/in/bj-cantlupe/`
     },
   },
+  flags: {
+    PARALLEL_QUERY_RUNNING: true
+  },
   plugins: [
     "gatsby-plugin-netlify",
     {
