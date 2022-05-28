@@ -63,5 +63,8 @@
     "serve": "gatsby serve",
     "draft": "node bin/draft.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "engines": {
+    "node": ">=14.15.0"
   }
 }
