@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import "../styles/index.css";
 
 class BlogIndex extends React.Component {
@@ -14,7 +14,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle} social={social}>
-        <SEO title="All posts" />
+        <Seo title="All posts" />
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
                     {title}
                   </Link>
                 </h2>
-                <small className="f5-ns f6">{node.frontmatter.date}</small>
+                <small className="f5-ns f6">{node.frontmatter.date} • {node.timeToRead}min read</small>
               </header>
               <section>
                 <p className="f4-ns f5 lineheight-copy margintop-small"
@@ -72,6 +72,7 @@ export const pageQuery = graphql`
             title
             description
           }
+          timeToRead
         }
       }
     }
